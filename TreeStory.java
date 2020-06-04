@@ -25,7 +25,7 @@ public class TreeStory {
           console.printf("%s is a %s %s. ", name, adjective, noun);
           console.printf("They are always %s %s.\n", adverb, verb);
     } else {
-        console.printf("You are too young!");
+        console.printf("You are too young! Please come back later.");
     }
    
     }
