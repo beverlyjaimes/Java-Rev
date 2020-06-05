@@ -16,14 +16,18 @@ public class TreeStory {
     int age = Integer.parseInt(ageAsString);
     // int age = scan.nextInt();
     // System.out.print(age);
-    if (age > 13 ) {
+    if (age >= 13 ) {
         String name = console.readLine("Enter a name:  ");
         String adjective = console.readLine("Enter an adjective:  ");
-        String noun = console.readLine("Enter a noun:  ");
-        if (noun.equals("dork")) {
-            console.printf("That is not allowed.");
-            System.exit(0);
-        }
+        boolean isInvalidWord;
+        String noun;
+        do {
+            noun = console.readLine("Enter a noun:  ");
+            isInvalidWord = (noun.equalsIgnoreCase("dork") || noun.equalsIgnoreCase("dork"));
+            if (isInvalidWord) {
+                console.printf("That language is not allowed. Try again. \n");
+            }
+        } while (isInvalidWord) ;
         String adverb = console.readLine("Enter an adverb:  ");
         String verb = console.readLine("Enter a verb ending with -ing:  ");
           
