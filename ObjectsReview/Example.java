@@ -3,10 +3,9 @@ package ObjectsReview;
 public class Example {
     
     public static void main(String[] args) {
-        System.out.println("We are making a new PEZ Dispenser");
+        System.out.println("We are making a new PEZ Dispenser.");
         PezDispenser dispenser = new PezDispenser();
-        dispenser.characterName = "Darth Vader";
-        System.out.printf("The dispenser is %s %n", dispenser.characterName);
+        System.out.printf("The dispenser is %s. %n", dispenser.getCharacterName());
         
     }
 }
