@@ -6,14 +6,16 @@ public class TreeStory {
     
     public static void main(String[] args) {
         Console console = System.console();
-        Scanner scan = new Scanner(System.in);
+        // Scanner scan = new Scanner(System.in);
         /*
          * Some terms: noun - Person, place or thing verb - An action adjective - A
          * description used to modify or describe a noun Enter your amazing code here!
          */
-    System.out.print("How old are you?");
-    int age = scan.nextInt();
-    System.out.print(age);
+    String ageAsString = console.readLine("How old are you? ");
+    // System.out.print("How old are you?\n");
+    int age = Integer.parseInt(ageAsString);
+    // int age = scan.nextInt();
+    // System.out.print(age);
     if (age > 13 ) {
         String name = console.readLine("Enter a name:  ");
         String adjective = console.readLine("Enter an adjective:  ");
@@ -25,7 +27,8 @@ public class TreeStory {
           console.printf("%s is a %s %s. ", name, adjective, noun);
           console.printf("They are always %s %s.\n", adverb, verb);
     } else {
-        console.printf("You are too young! Please come back later.");
+        console.printf("You must be at least 13 to play.\n");
+        System.exit(0);
     }
    
     }
