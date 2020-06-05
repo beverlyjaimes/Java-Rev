@@ -20,6 +20,10 @@ public class TreeStory {
         String name = console.readLine("Enter a name:  ");
         String adjective = console.readLine("Enter an adjective:  ");
         String noun = console.readLine("Enter a noun:  ");
+        if (noun.equals("dork")) {
+            console.printf("That is not allowed.");
+            System.exit(0);
+        }
         String adverb = console.readLine("Enter an adverb:  ");
         String verb = console.readLine("Enter a verb ending with -ing:  ");
           
