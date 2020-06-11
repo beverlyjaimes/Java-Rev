@@ -23,8 +23,24 @@ public class Example {
         if(dispenser.isEmpty()) {
             System.out.println("Ate all the PEZ");
         }
-
-
+        dispenser.fill(4);
+        dispenser.fill(2);
+        while(dispenser.dispnese()) {
+            System.out.println("Chomp!");
+        }
+        try {
+            dispenser.fill(400);
+            System.out.println("This will never happen.");
+    
+        } catch (IllegalArgumentException iae) {
+            System.out.println("Whoah there!");
+            System.out.printf("That error was %s",
+                iae.getMessage());
+        }
+        if(dispenser.isEmpty()) {
+            System.out.println("Ate all the PEZ");
+        }
+       
         
  
 
