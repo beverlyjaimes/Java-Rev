@@ -11,8 +11,13 @@ public class PezDispenser {
         pezCount = 0;
     }
 
+    // overloading 
     public void fill(){
         pezCount = MAX_PEZ;
+    }
+
+    public void fill(int pezAmount) {
+        pezCount += pezAmount;
     }
 
     public boolean dispnese() {
