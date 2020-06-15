@@ -1,8 +1,14 @@
 package HangmanGame;
 
+import java.util.Scanner;
+
 public class Hangman {
     public static void main(String[] args) {
-        Game game = new Game("treehouse");
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Player One:" + "\n" +" Please enter a word for the other player to guess: ");
+        String theWord = input.nextLine();
+        Game game = new Game(theWord);
         Prompter prompter = new Prompter(game);
 
         while (game.getRemainingTries() > 0 && !game.isWon()) {
