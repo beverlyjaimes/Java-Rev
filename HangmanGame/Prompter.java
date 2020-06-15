@@ -14,8 +14,13 @@ class Prompter {
         System.out.print("Enter a letter:  ");
         String guessInput = scanner.nextLine();
         char guess = guessInput.charAt(0);
-
-        return game.applyGuess(guess);
+        boolean isHit = false;
+        try {
+          isHit = game.applyGuess(guess);
+        } catch(IllegalArgumentException iae) {
+            System.out.println(iae.getMessage());
+        }
+        return isHit;
     }
 
     public void displayProgress() {
