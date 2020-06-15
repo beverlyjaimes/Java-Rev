@@ -33,4 +33,15 @@ class Prompter {
         game.getRemainingTries(),
         game.getCurrentProgress());
     }
+
+    public void displayOutcome() {
+        if (game.isWon()) {
+            System.out.printf("You won! %n Tries Remaining: %d%n The word was: %s%n ",
+                                game.getRemainingTries(),
+                                game.getAnswer());
+        } else if (!game.isWon())  {
+            System.out.printf("You lost the game. The word was: %s%n ",
+                                game.getAnswer());
+        }
+    }
 }
