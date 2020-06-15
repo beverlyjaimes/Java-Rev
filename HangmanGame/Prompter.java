@@ -19,7 +19,8 @@ class Prompter {
     }
 
     public void displayProgress() {
-        System.out.printf ("Try to solve: %s%n", 
+        System.out.printf ("You have %d treis left to solve:  %s%n", 
+        game.getRemainingTries(),
         game.getCurrentProgress());
     }
 }
